@@ -1,0 +1,60 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'sainnhe/gruvbox-material'
+Plug 'sheerun/vim-polyglot'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'SirVer/ultisnips'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+call plug#end()
+
+set termguicolors
+colorscheme nord
+set incsearch
+set ignorecase smartcase
+set hidden
+set wrap
+set showcmd
+set wildmenu
+set backspace=indent,eol,start
+set shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent smartindent
+set nu rnu
+set ttimeoutlen=100
+set updatetime=1000
+set mouse=a
+set nrformats-=octal
+set history=200
+
+let g:tex_flavor = "latex"
+
+" Don't use Ex mode, use Q for formatting.
+map Q g
+
+" To avoid deleting text when using Ctrl-U in insert mode
+inoremap <C-U> <C-G>u<C-U>
+
+" UltiSnips Settings
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:UltiSnipsEditSplit="vertical"
+
+" LLP settings
+let g:livepreview_previewer = 'zathura'
+
+" Deoplet settings
+let g:deoplete#enable_at_startup = 1
+
+set t_ut=""
