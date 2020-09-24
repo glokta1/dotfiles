@@ -201,17 +201,18 @@ bar {
         
 }
 
-set $keyboard_layout Keyboard Layout: (e) US English, (g) German
+set $keyboard_layout Keyboard Layout: (e) US English, (g) German (a) Arabic
 mode "$keyboard_layout" {
 
-bindsym g exec --no-startup-id setxkbmap de ,mode "default"
-bindsym e exec --no-startup-id setxkbmap us ,mode "default"
+bindcode 42 exec --no-startup-id setxkbmap de ,mode "default"
+bindcode 26 exec --no-startup-id setxkbmap us ,mode "default"
+bindcode 38 exec --no-startup-id setxkbmap ar ,mode "default"
 
 # back to normal: Enter or Escape
 bindsym Return mode "default"
 bindsym Escape mode "default"
 }
-bindsym $mod+shift+Z mode "$keyboard_layout"
+bindcode $mod+shift+52 mode "$keyboard_layout"
 
 gaps inner 15
 gaps outer 15
