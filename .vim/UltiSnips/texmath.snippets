@@ -34,6 +34,31 @@ snippet eqann "Equation array without a number" b
 \end{eqnarray*}
 endsnippet
 
+snippet // "\frac{}{}" iA
+\frac{$1}{$2}$0
+endsnippet
+
+snippet sqrt "\sqrt[]{}" iA
+\sqrt{$1}$0
+endsnippet
+snippet int "\int" i
+\int_{$1}^{$2} $3 \: \mathrm{d}$4
+endsnippet
+
+snippet cases "cases" wA
+\begin{cases}
+	$1
+\end{cases}
+endsnippet
+
+snippet invs "inverse" iA
+^{-1}
+endsnippet
+
+snippet sum "\sum_{}^{}" i
+\sum_{${1:i=0}}^{${2:\infty}} $3
+endsnippet
+
 #################
 # PHYSICS STUFF #
 #################
