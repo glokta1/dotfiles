@@ -21,11 +21,10 @@ endif
 call plug#end()
 
 set termguicolors
-colorscheme nord
+colorscheme gruvbox-material
 set incsearch
 set ignorecase smartcase
 set hidden
-set wrap
 set showcmd
 set wildmenu
 set backspace=indent,eol,start
@@ -36,8 +35,16 @@ set updatetime=1000
 set mouse=a
 set nrformats-=octal
 set history=200
+set clipboard=unnamedplus
+set splitbelow splitright
 
 let g:tex_flavor = "latex"
+
+" Shortcutting split navigation, saving a keypress:
+	map <C-h> <C-w>h
+	map <C-j> <C-w>j
+	map <C-k> <C-w>k
+	map <C-l> <C-w>l
 
 " Don't use Ex mode, use Q for formatting.
 map Q g
@@ -50,6 +57,7 @@ let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips']
 
 " LLP settings
 let g:livepreview_previewer = 'zathura'
