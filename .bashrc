@@ -101,6 +101,7 @@ alias rt="ranger ~/Documents/Textbooks"
 alias rd="ranger ~/Downloads"
 alias rp="ranger ~/Pictures"
 alias rc="ranger .config"
+alias v="vim"
 alias i3="vim ~/.config/i3/config"
 alias texvim="cd ~/Documents/latex && vim"
 
@@ -164,7 +165,7 @@ export READER="zathura"
 export BROWSER="firefox"
 export OPENER="rifle"
 export PAGER="less"
-export MYVIMRC="~/.vimrc"
+export MYVIMRC="~/.vim/vimrc"
 export NNN_BMS='t:~/Documents/Textbooks;d:~/Downloads/;p:~/Pictures/;c:~/.config'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_PLUG='p:preview-tui'
