@@ -4,6 +4,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Plugins {{{
+
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'sainnhe/gruvbox-material'
@@ -19,6 +21,10 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 call plug#end()
+
+"}}}
+
+let mapleader=" "
 
 set termguicolors
 colorscheme gruvbox-material
@@ -65,4 +71,10 @@ let g:livepreview_previewer = 'zathura'
 " Deoplet settings
 let g:deoplete#enable_at_startup = 1
 
+" VIMRC {{{
+
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
+
+"}}}
 set t_ut=""
