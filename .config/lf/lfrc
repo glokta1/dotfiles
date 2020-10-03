@@ -2,6 +2,7 @@ set previewer ~/.config/lf/preview
 map . set hidden!
 set ratios 1:2:3
 set color256 on
+set icons
 map D delete
 map gD cd ~/Downloads
 map gd cd ~/Documents
