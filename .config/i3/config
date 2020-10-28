@@ -34,7 +34,12 @@ exec redshift
 exec flameshot
 exec syncthing
 exec wal -R
+exec picom -b
+exec ~/.local/bin/backlight.sh
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec xset m 26/10/ 4
+# Display settings
+exec_always xrandr --output eDP1 --off --output DP1 --off --output HDMI1 --off --output HDMI2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 for_window [class="^.*"] border pixel 2 
 
@@ -49,10 +54,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# start rofi
+bindsym $mod+v exec rofi -show run 
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
@@ -217,12 +225,12 @@ bindcode $mod+shift+52 mode "$keyboard_layout"
 gaps inner 15
 gaps outer 15
 
-bindsym $mod+b exec gnome-terminal -e "lf"
+bindsym $mod+b exec kitty -e "lf"
 bindsym $mod+w exec --no-startup-id firefox
 bindsym $mod+m exec --no-startup-id spotify
 
 assign [class="firefox"] $ws1
-assign [class="mailspring"] $ws5
+assign [class="discord"] $ws2
 for_window [class="Spotify"] move to workspace $ws10
 # class                 border  backgr. text indicator child_border
 #client.focused          $bg     $bg     $fg  $bg       $bg
