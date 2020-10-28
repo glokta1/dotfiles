@@ -91,6 +91,7 @@ unset use_color safe_term match_lhs sh
 
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
+alias rm="rm -i"
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
@@ -101,10 +102,10 @@ alias rt="ranger ~/Documents/Textbooks"
 alias rd="ranger ~/Downloads"
 alias rp="ranger ~/Pictures"
 alias rc="ranger .config"
-alias v="vim"
-alias i3="vim ~/.config/i3/config"
-alias texvim="cd ~/Documents/latex && vim"
-
+alias vim="nvim"
+alias v="nvim"
+alias i3="nvim ~/.config/i3/config"
+alias texvim="cd ~/Documents/latex && nvim"
 xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
@@ -159,8 +160,8 @@ cat ~/.cache/wal/sequences
 source ~/.cache/wal/colors-tty.sh
 
 export NNN_COLORS="2136"
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export READER="zathura"
 export BROWSER="firefox"
 export OPENER="rifle"
@@ -213,7 +214,7 @@ ex=:\
 *.scala=:\
 *.ts=:\
 *.vim=:\
-*vimrc=:\
+vimrc=:\
 *.cmd=:\
 *.ps1=:\
 *.sh=:\
