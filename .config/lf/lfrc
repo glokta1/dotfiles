@@ -12,6 +12,7 @@ map gv cd ~/Videos
 map gl cd ~/Documents/latex
 map gm cd ~/Music
 map gc cd ~/.config
+map gf cd ~/Documents/codeforces
 map bw $SHELL wal -i %f && setbg %f
 set $OPENER rifle
 set number
