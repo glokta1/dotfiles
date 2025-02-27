@@ -1,0 +1,30 @@
+[user]
+	email = rafeyahmad@protonmail.com
+	name = Rafey Ahmad
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = /Users/rafeyahmad/.gitignore
+[includeIf "gitdir:~/telecrm/"]
+	path = ~/telecrm/.gitconfig
+[column]
+	ui = auto
+[maintenance]
+	repo = /Users/rafeyahmad/telecrm/onecrm
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true

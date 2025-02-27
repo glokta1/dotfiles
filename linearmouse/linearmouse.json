@@ -1,0 +1,79 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x248a",
+          "category" : "mouse",
+          "productID" : "0x8367",
+          "productName" : "Wireless Receiver"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : false
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "if" : {
+        "app" : "com.sketchup.SketchUp.2023",
+        "device" : {
+          "productID" : "0x8367",
+          "category" : "mouse",
+          "vendorID" : "0x248a",
+          "productName" : "Wireless Receiver"
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "category" : "mouse",
+          "productID" : "0xb019",
+          "serialNumber" : "4A3DD63BC5C514CC",
+          "productName" : "MX Master 2S"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "distance" : {
+          "vertical" : 3
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0x281",
+          "vendorID" : "0x5ac",
+          "category" : "trackpad",
+          "productName" : "Apple Internal Keyboard \/ Trackpad"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    }
+  ]
+}
