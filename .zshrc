@@ -106,8 +106,10 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias v="nvim"
 alias be="bundle exec"
+alias lg="lazygit"
+alias cat="bat"
 
-co() { g++-14 -std=c++17 -O2 -o "${1%.*}" $1 -Wall; }
+co() { g++-15 -std=c++17 -O2 -o "${1%.*}" $1 -Wall; }
 run() { co $1 && ./${1%.*} & fg; }
 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -120,3 +122,10 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 . "$HOME/.local/bin/env"
+
+# bun completions
+[ -s "/Users/rafeyahmad/.bun/_bun" ] && source "/Users/rafeyahmad/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

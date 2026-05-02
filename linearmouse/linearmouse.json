@@ -1,13 +1,13 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.1",
   "schemes" : [
     {
       "if" : {
         "device" : {
-          "vendorID" : "0x248a",
           "category" : "mouse",
           "productID" : "0x8367",
-          "productName" : "Wireless Receiver"
+          "productName" : "Wireless Receiver",
+          "vendorID" : "0x248a"
         }
       },
       "scrolling" : {
@@ -17,43 +17,43 @@
       }
     },
     {
+      "if" : {
+        "app" : "com.sketchup.SketchUp.2023",
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x8367",
+          "productName" : "Wireless Receiver",
+          "vendorID" : "0x248a"
+        }
+      },
       "scrolling" : {
-        "reverse" : {
-          "vertical" : false
-        },
         "acceleration" : {
           "vertical" : 1
-        }
-      },
-      "if" : {
-        "app" : "com.sketchup.SketchUp.2023",
-        "device" : {
-          "productID" : "0x8367",
-          "category" : "mouse",
-          "vendorID" : "0x248a",
-          "productName" : "Wireless Receiver"
+        },
+        "reverse" : {
+          "vertical" : false
         }
       }
     },
     {
       "if" : {
         "device" : {
-          "vendorID" : "0x46d",
           "category" : "mouse",
           "productID" : "0xb019",
+          "productName" : "MX Master 2S",
           "serialNumber" : "4A3DD63BC5C514CC",
-          "productName" : "MX Master 2S"
+          "vendorID" : "0x46d"
         }
       },
       "scrolling" : {
-        "reverse" : {
-          "vertical" : true
+        "acceleration" : {
+          "vertical" : 1
         },
         "distance" : {
           "vertical" : 3
         },
-        "acceleration" : {
-          "vertical" : 1
+        "reverse" : {
+          "vertical" : true
         },
         "speed" : {
           "vertical" : 0
@@ -63,15 +63,46 @@
     {
       "if" : {
         "device" : {
-          "productID" : "0x281",
-          "vendorID" : "0x5ac",
           "category" : "trackpad",
-          "productName" : "Apple Internal Keyboard \/ Trackpad"
+          "productID" : "0x281",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x5ac"
         }
       },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xfc03",
+          "productName" : "2.4G Receiver",
+          "vendorID" : "0x3554"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xb036",
+          "productName" : "Pebble M350s",
+          "serialNumber" : "1BA457AE",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
         }
       }
     }

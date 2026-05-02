@@ -1,8 +1,58 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run ⁠ zed: open default keymap ⁠
+// from the command palette.
 [
   {
-    "context": "Editor",
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
-      "cmd-shift-k": "editor::DeleteLine"
-    }
-  }
+      // Leader mappings (Space as leader)
+      "space r n": "editor::Rename",
+      "space w s": "project_symbols::Toggle",
+      "space d s": "outline::Toggle",
+      "space s f": "file_finder::Toggle",
+      "space s g": "pane::DeploySearch",
+
+      // "g" prefix mappings
+      "g p d": "editor::GoToDefinitionSplit", // Closest to 'Peek' in Zed
+      "g h": "editor::Hover",
+      "g i": "editor::GoToImplementation",
+      "g p i": "editor::GoToImplementationSplit",
+      "g q": "editor::ToggleCodeActions",
+      "g r": "editor::FindAllReferences",
+      "g t": "editor::GoToTypeDefinition",
+      "g p t": "editor::GoToTypeDefinitionSplit",
+    },
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      "ctrl-f": "buffer_search::Deploy", // vim default: page down
+      "ctrl-c": "editor::Copy", // vim default: return to normal mode
+      "ctrl-x": "editor::Cut", // vim default: decrement
+      "ctrl-v": "editor::Paste", // vim default: visual block mode
+      "ctrl-a": "editor::SelectAll", // vim default: increment
+      "ctrl-y": "editor::Undo", // vim default: line up
+      "ctrl-s": "workspace::Save", // vim default: show signature
+      "ctrl-b": "workspace::ToggleLeftDock", // vim default: down
+      "ctrl-j": "terminal_panel::Toggle",
+    },
+  },
 ]
